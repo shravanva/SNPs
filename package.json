@@ -1,0 +1,15 @@
+{
+  "name": "node-genetics-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "archiver": "^5.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.1",
+    "csv-parse": "^5.5.0"
+  }
+}

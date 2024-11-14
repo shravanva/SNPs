@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Edwards Lab-TAMU</title>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="department">PLPM</div>
+            <h1>Dr. Edwards Lab-TAMU</h1>
+            <h3>Co-PI: Dr. Song</h3>
+            <h2>SNP-Phenotype Half-Violin and Beeswarm Plots</h2>
+        </div>
+        <div class="form-container">
+            <form id="uploadForm">
+                <div class="input-group">
+                    <label for="pheno_file">Upload Phenotype File (TSV):</label>
+                    <input type="file" id="pheno_file" name="pheno_file" accept=".tsv,.txt" required>
+                </div>
+                <div class="input-group">
+                    <label for="snp_files">Upload SNP Files (CSV):</label>
+                    <input type="file" id="snp_files" name="snp_files" accept=".csv" multiple required>
+                </div>
+                <button type="submit" class="submit-btn">Generate and Download Results</button>
+            </form>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="config.js"></script>
+    <script src="dataProcessor.js"></script>
+    <script src="plots.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
